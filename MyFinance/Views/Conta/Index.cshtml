@@ -1,9 +1,10 @@
 ﻿
 <h3>Minhas contas</h3>
 
-<table>
+<table class="table table-bordered">
     <thead>
         <tr>
+            <th>#</th>
             <th>ID</th>
             <th>NOME</th>
             <th>SALDO</th>
@@ -14,7 +15,7 @@
         {
             <tbody>
                     <tr>
-                        <td><button class="btn btn-danger">Excluir</button></td>
+                        <td><button class="btn btn-danger"  onclick="Excluir(@item.Id.ToString())">Excluir</button></td>
                         <td>@item.Id.ToString()</td>
                         <td>@item.Nome.ToString()</td>
                         <td>@item.Saldo.ToString()</td>
@@ -23,3 +24,11 @@
         }
     }
 </table>
+<button type="button" class="btn btn-primary" onclick="window.location.href = '../Conta/CriarConta'">Criar Conta</button>
+
+<script>
+    function Excluir(id_conta)
+    {
+        window.location.href = "../Conta/ExcluirConta/" + id_conta;
+    }
+</script>

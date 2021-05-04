@@ -43,3 +43,4 @@ C:\TUDO\Projetos\CSharp\MyFinance\MyFinance\obj\Debug\netcoreapp2.1\Razor\Views\
 C:\TUDO\Projetos\CSharp\MyFinance\MyFinance\obj\Debug\netcoreapp2.1\Razor\Views\Transacao\Extrato.cshtml.g.cs
 C:\TUDO\Projetos\CSharp\MyFinance\MyFinance\obj\Debug\netcoreapp2.1\Razor\Views\Transacao\Index.cshtml.g.cs
 C:\TUDO\Projetos\CSharp\MyFinance\MyFinance\obj\Debug\netcoreapp2.1\Razor\Views\Home\Ajuda.cshtml.g.cs
+C:\TUDO\Projetos\CSharp\MyFinance\MyFinance\obj\Debug\netcoreapp2.1\Razor\Views\Conta\CriarConta.cshtml.g.cs
