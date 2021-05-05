@@ -1,5 +1,40 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
+<h3>Planos de conta</h3>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>#</th>
+            <th>ID</th>
+            <th>DESCRICAO</th>
+            <th>TIPO</th>
+        </tr>
+    </thead>
+    @{
+        foreach (var item in (List<PlanoContaModel>)ViewBag.ListaPlanoConta)
+        {
+            <tbody>
+                <tr>
+                    <td><button class="btn btn-primary" onclick="Editar(@item.Id.ToString())">Editar</button></td>
+                    <td><button class="btn btn-danger" onclick="Excluir(@item.Id.ToString())">Excluir</button></td>
+                    <td>@item.Id.ToString()</td>
+                    <td>@item.Descricao.ToString()</td>
+                    <td>@item.Tipo.ToString().Replace("R","Receita").Replace("D","Despesa")</td>
+                </tr>
+            </tbody>
+        }
+    }
+</table>
+<button type="button" class="btn btn-primary" onclick="window.location.href = '../PlanoConta/CriarPlanoConta'">Criar Plano de Conta</button>
+
+<script>
+    function Excluir(id_conta)
+    {
+        window.location.href = "../PlanoConta/ExcluirPlanoConta/" + id_conta;
+    }
+
+    function Editar(id_conta) {
+        window.location.href = "../PlanoConta/CriarPlanoConta/" + id_conta;
+    }
+</script>
